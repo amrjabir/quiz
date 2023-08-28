@@ -1,91 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Canada Immigration Quiz</title>
+<title>Can I Immigrate to Canada?</title>
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+body {
+  font-family: Arial, sans-serif;
+}
 
-  #quizContainer {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 400px;
-  }
+.quiz {
+  width: 500px;
+  margin: 0 auto;
+}
 
-  .question {
-    display: none;
-  }
+.question {
+  margin-bottom: 10px;
+}
 
-  p {
-    margin-top: 0;
-  }
+.answer {
+  margin-bottom: 10px;
+}
 
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
+input[type="radio"] {
+  margin-right: 10px;
+}
 
-  button {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.button {
+  background-color: #337ab7;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-  button:hover {
-    background-color: #2980b9;
-  }
-
-  #result {
-    text-align: center;
-    margin-top: 20px;
-  }
+.button:hover {
+  background-color: #285e8f;
+}
 </style>
 </head>
 <body>
+<div class="quiz">
+  <h1>Can I Immigrate to Canada?</h1>
 
-<div id="quizContainer">
-  <h1>Canada Immigration Eligibility Quiz</h1>
+  <form action="/result" method="post">
+    <h2>Question 1</h2>
+    <p>Are you a skilled worker?</p>
+    <input type="radio" name="question1" value="Yes"> Yes
+    <input type="radio" name="question1" value="No"> No
 
-  <div class="question" id="q1">
-    <p>Question 1: Do you have a valid job offer from a Canadian employer?</p>
-    <label><input type="radio" name="q1" value="yes"> Yes</label>
-    <label><input type="radio" name="q1" value="no"> No</label>
-    <button onclick="nextQuestion('q1')">Next</button>
-  </div>
+    <h2>Question 2</h2>
+    <p>Do you have a valid job offer in Canada?</p>
+    <input type="radio" name="question2" value="Yes"> Yes
+    <input type="radio" name="question2" value="No"> No
 
-  <div class="question" id="q2">
-    <p>Question 2: Do you have a post-secondary degree or diploma?</p>
-    <label><input type="radio" name="q2" value="yes"> Yes</label>
-    <label><input type="radio" name="q2" value="no"> No</label>
-    <button onclick="nextQuestion('q2')">Next</button>
-  </div>
+    <h2>Question 3</h2>
+    <p>Do you have enough money to support yourself in Canada?</p>
+    <input type="radio" name="question3" value="Yes"> Yes
+    <input type="radio" name="question3" value="No"> No
 
-  <!-- Add more questions here -->
+    <h2>Question 4</h2>
+    <p>Are you a refugee?</p>
+    <input type="radio" name="question4" value="Yes"> Yes
+    <input type="radio" name="question4" value="No"> No
 
-  <div class="question" id="result">
-    <!-- The quiz result will be displayed here -->
-  </div>
+    <h2>Question 5</h2>
+    <p>Are you a family member of a Canadian citizen or permanent resident?</p>
+    <input type="radio" name="question5" value="Yes"> Yes
+    <input type="radio" name="question5" value="No"> No
+
+    <input type="submit" value="Submit" class="button">
+  </form>
 </div>
-
-<script>
-// JavaScript code remains the same
-</script>
-
 </body>
 </html>
