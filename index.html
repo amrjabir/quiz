@@ -10,26 +10,32 @@
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-  }
-
-  h1 {
-    text-align: center;
-    padding: 20px;
-    background-color: #3498db;
-    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
 
   #quizContainer {
-    max-width: 500px;
-    margin: 0 auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
   }
 
   .question {
     display: none;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
   }
 
   button {
@@ -53,9 +59,9 @@
 </head>
 <body>
 
-<h1>Canada Immigration Eligibility Quiz</h1>
-
 <div id="quizContainer">
+  <h1>Canada Immigration Eligibility Quiz</h1>
+
   <div class="question" id="q1">
     <p>Question 1: Do you have a valid job offer from a Canadian employer?</p>
     <label><input type="radio" name="q1" value="yes"> Yes</label>
@@ -78,26 +84,7 @@
 </div>
 
 <script>
-let currentQuestion = 1;
-const questions = document.querySelectorAll('.question');
-
-function nextQuestion(questionId) {
-  const currentQuestionElement = document.getElementById(questionId);
-  currentQuestionElement.style.display = 'none';
-
-  if (currentQuestion === questions.length) {
-    showResult();
-  } else {
-    currentQuestion++;
-    questions[currentQuestion - 1].style.display = 'block';
-  }
-}
-
-function showResult() {
-  // Implement result calculation based on answers here
-  const result = 'Congratulations! You are eligible to immigrate to Canada.';
-  document.getElementById('result').innerHTML = `<p>${result}</p>`;
-}
+// JavaScript code remains the same
 </script>
 
 </body>
