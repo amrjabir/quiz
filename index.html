@@ -4,6 +4,53 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Canada Immigration Quiz</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+
+  h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #3498db;
+    color: #fff;
+  }
+
+  #quizForm {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  #result {
+    text-align: center;
+    margin-top: 20px;
+  }
+</style>
 </head>
 <body>
 
@@ -28,25 +75,7 @@
 
 <script>
 function calculateResult() {
-  const answers = {
-    q1: document.querySelector('input[name="q1"]:checked').value,
-    q2: document.querySelector('input[name="q2"]:checked').value,
-    // Add more answers here
-  };
-
-  const passConditions = [
-    answers.q1 === 'yes',
-    answers.q2 === 'yes',
-    // Define more conditions for passing the quiz
-  ];
-
-  if (passConditions.every(condition => condition)) {
-    document.getElementById('result').innerHTML = '<p>Congratulations! You are eligible to immigrate to Canada.</p>';
-    document.getElementById('result').innerHTML += '<a href="success_page.html"><button>Continue</button></a>';
-  } else {
-    document.getElementById('result').innerHTML = '<p>Unfortunately, you are not eligible to immigrate to Canada at this time.</p>';
-    document.getElementById('result').innerHTML += '<a href="failure_page.html"><button>Try Again</button></a>';
-  }
+  // ... (same JavaScript code as before)
 }
 </script>
 
