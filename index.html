@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
- <head><meta charset="utf-8">
-  
-  <link rel="stylesheet" href="/styles1.css" data-precedence="next">
-  <title>USA Travel Guide</title>
-  <meta name="description" content="USA  Travel Guide">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="next-size-adjust">
-  <script src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js" nomodule=""></script><style>.osSwitch{position:relative;display:inline-block;width:34px;height:15.3px}.osSwitch input{opacity:0;width:0;height:0}.osSlider{position:absolute;top:0;left:0;right:0;bottom:0;border-radius:34px;background-color:#93a0b5;transition:0.4s}.osSlider:before{position:absolute;content:'';height:13px;width:13px;left:2px;bottom:1px;border-radius:50%;background-color:white;transition:0.4s}input:checked+.sliderGreen{background-color:#04d289}input:checked+.sliderRed{background-color:#ff3b30}input:not(:checked)+.defaultGreen{background-color:#04d289}input:checked+.osSlider:before{transform:translateX(17px)}
-</style><style>
-    @font-face {
-      font-family: 'SegoeUI_online_security'; 
-      src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/segoe-ui.woff);
-    }
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canada Immigration Quiz</title>
+</head>
+<body>
 
-    @font-face {
-      font-family: 'SegoeUI_bold_online_security'; 
-      src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/segoe-ui-bold.woff);
-    }
-</style></head>
-  
-   <body class="canada" data-new-gr-c-s-check-loaded="14.1112.0" data-gr-ext-installed="">
-     <main class="">
-       <div class="site-wrap">
-         <div class="quizContainer">
-           <img alt="canada travel" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1" style="color:transparent;border-radius:10px" srcset="/555.png" src="/555.png">
-           <h3><br>👇👇Click Here below👇👇</h3>
-           <a href="https://theevergreenemporium.com/category/usa-scholarships/">GET STARTED</a>
-           <a href="https://theevergreenemporium.com/scholarships-for-international-students-in-usa/">USA VISA FREE<!-- --> </a>
-           <a href="https://theevergreenemporium.com/canada-visa-express-entry-application-2023/">MAKE MONEY</a>
-           <a href="https://theevergreenemporium.com/scholarship-opportunities-in-usa/">JOBS IN USA</a>
-         </div>
-       </div>
-     </main>
-    </body>
-<!-- Meta Pixel Code -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141529008-2"></script>
+<h1>Canada Immigration Eligibility Quiz</h1>
+<p>Answer the following questions to determine your eligibility for immigration to Canada:</p>
+
+<form id="quizForm">
+  <p>Question 1: Do you have a valid job offer from a Canadian employer?</p>
+  <label><input type="radio" name="q1" value="yes"> Yes</label>
+  <label><input type="radio" name="q1" value="no"> No</label>
+
+  <p>Question 2: Do you have a post-secondary degree or diploma?</p>
+  <label><input type="radio" name="q2" value="yes"> Yes</label>
+  <label><input type="radio" name="q2" value="no"> No</label>
+
+  <!-- Add more questions here -->
+
+  <button type="button" onclick="calculateResult()">Submit</button>
+</form>
+
+<div id="result"></div>
+
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+function calculateResult() {
+  const answers = {
+    q1: document.querySelector('input[name="q1"]:checked').value,
+    q2: document.querySelector('input[name="q2"]:checked').value,
+    // Add more answers here
+  };
 
-  gtag('config', 'UA-141529008-2');
+  const passConditions = [
+    answers.q1 === 'yes',
+    answers.q2 === 'yes',
+    // Define more conditions for passing the quiz
+  ];
+
+  if (passConditions.every(condition => condition)) {
+    document.getElementById('result').innerHTML = '<p>Congratulations! You are eligible to immigrate to Canada.</p>';
+    document.getElementById('result').innerHTML += '<a href="success_page.html"><button>Continue</button></a>';
+  } else {
+    document.getElementById('result').innerHTML = '<p>Unfortunately, you are not eligible to immigrate to Canada at this time.</p>';
+    document.getElementById('result').innerHTML += '<a href="failure_page.html"><button>Try Again</button></a>';
+  }
+}
 </script>
 
-<!-- End Meta Pixel Code -->
+</body>
 </html>
