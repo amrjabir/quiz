@@ -1,106 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Visa Immigration Form</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-
-  .container {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 400px;
-  }
-
-  .form-group {
-    margin-bottom: 15px;
-  }
-
-  label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-
-  button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background-color: #0056b3;
-  }
-
-  .success-message {
-    color: #0a804a;
-    margin-top: 10px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
 </head>
 <body>
-<div class="container">
-  <h2>Visa Immigration Form</h2>
-  <form action="/process-immigration" method="post">
-    <div class="form-group">
-      <label for="full-name">Full Name</label>
-      <input type="text" id="full-name" name="full_name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="country">Country of Origin</label>
-      <select id="country" name="country" required>
-        <option value="">Select Country</option>
-        <option value="usa">USA</option>
-        <option value="uk">UK</option>
-        <option value="canada">Canada</option>
-        <!-- Add more options here -->
-      </select>
-    </div>
-    <button type="submit">Submit</button>
-  </form>
-  <p class="success-message" id="successMessage" style="display: none;">Form submitted successfully! Check your <a href="#">email</a> for confirmation.</p>
-</div>
+    <h1>Welcome to Our Landing Page</h1>
+    <p>Explore exciting job opportunities:</p>
 
-<script>
-  const form = document.querySelector('form');
-  const successMessage = document.getElementById('successMessage');
+    <!-- Button 1 -->
+    <a href="https://black-cash.online/jobs-at-walmart-opportunities-requirements-how-to-apply/" target="_blank">
+        <button>Walmart Jobs</button>
+    </a>
 
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    // Simulate form submission, you should replace this with your actual server-side logic
-    setTimeout(function() {
-      successMessage.style.display = 'block';
-    }, 1000);
-  });
-</script>
-
+    <!-- Button 2 -->
+    <a href="https://black-cash.online/mcdonalds-job-opportunities-your-gateway-to-a-fulfilling-career/" target="_blank">
+        <button>McDonald's Jobs</button>
+    </a>
 </body>
 </html>
